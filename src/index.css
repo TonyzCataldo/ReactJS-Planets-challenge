@@ -3,7 +3,6 @@
 @tailwind utilities;
 .hovereffect::before {
   opacity: 0;
-  background-color: var(--cor-before);
 }
 
 .hovereffect:hover::before {
