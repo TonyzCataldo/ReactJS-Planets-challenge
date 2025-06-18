@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { PlanetProvider } from "./context/PlanetContext";
 import Layout from "./Layout";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* :nomePlaneta? → opcional, cobre "/" e "/mars", "/venus" etc */}
         <Route
@@ -16,7 +16,7 @@ const App = () => {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
