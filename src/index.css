@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hovereffect::before {
+  opacity: 0;
+  background-color: var(--cor-before);
+}
+
+.hovereffect:hover::before {
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .backimage {
+    background-position: -98% -120px !important;
+  }
+}
