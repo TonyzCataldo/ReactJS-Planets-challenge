@@ -1,4 +1,7 @@
-const TextResponse = ({ planeta, selectedInfo }) => {
+import { usePlanet } from "../context/PlanetContext";
+
+const TextResponse = ({ selectedInfo }) => {
+  const { planeta } = usePlanet();
   return (
     <main className="px-6 md:pl-[2.438rem] md:pr-[4.313rem] flex flex-col items-center text-center md:items-start md:flex-1 md:text-left lg:pl-0 lg:pr-0">
       <h1 className="text-white font-antonio text-[40px] md:text-5xl uppercase mb-4 md:mb-6 lg:text-[5rem]">

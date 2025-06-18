@@ -1,4 +1,8 @@
-const MobileOptions = ({ cor, selectedInfo, setSelectedInfo }) => {
+import { usePlanet } from "../context/PlanetContext";
+
+const MobileOptions = ({ selectedInfo, setSelectedInfo }) => {
+  const { planeta } = usePlanet();
+
   return (
     <section className="flex justify-between mt-6 px-9  border-b border-white/20 md:hidden">
       <button
@@ -8,7 +12,7 @@ const MobileOptions = ({ cor, selectedInfo, setSelectedInfo }) => {
             ? "text-white/100 border-b-4"
             : "text-white/50"
         }`}
-        style={{ borderColor: cor, width: "72.4px" }}
+        style={{ borderColor: planeta.cor, width: "72.4px" }}
       >
         OVERVIEW
       </button>
@@ -19,7 +23,7 @@ const MobileOptions = ({ cor, selectedInfo, setSelectedInfo }) => {
             ? "text-white/100 border-b-4"
             : "text-white/50"
         }`}
-        style={{ borderColor: cor, width: "77.8px" }}
+        style={{ borderColor: planeta.cor, width: "77.8px" }}
       >
         STRUCTURE
       </button>
@@ -30,7 +34,7 @@ const MobileOptions = ({ cor, selectedInfo, setSelectedInfo }) => {
             ? "text-white/100 border-b-4"
             : "text-white/50"
         }`}
-        style={{ borderColor: cor, width: "65px" }}
+        style={{ borderColor: planeta.cor, width: "65px" }}
       >
         SURFACE
       </button>

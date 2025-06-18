@@ -1,4 +1,9 @@
-const DesktopOptions = ({ cor, selectedInfo, setSelectedInfo }) => {
+import { usePlanet } from "../context/PlanetContext";
+
+const DesktopOptions = ({ selectedInfo, setSelectedInfo }) => {
+  const { planeta } = usePlanet();
+  const cor = planeta.cor;
+
   return (
     <section className="hidden md:flex md:flex-col md:flex-[0.829] md:mr-10 md:justify-center md:gap-4 font-spartan font-bold text-[0.656rem] lg:mr-0 lg:text-sm">
       <button

@@ -28,18 +28,16 @@ const Layout = () => {
         {" "}
         <Header menuVisible={menuVisible} setMenuVisible={setMenuVisible} />
         <MobileOptions
-          cor={planeta.cor}
           selectedInfo={selectedInfo}
           setSelectedInfo={setSelectedInfo}
         />
         <PlanetsMd />
       </div>
       <div className="lg:flex lg:mt-[8.125rem] lg:pr-[11.46%]">
-        <PlanetImage images={planeta.images} selectedInfo={selectedInfo} />
+        <PlanetImage selectedInfo={selectedInfo} />
         <div className="md:flex lg:flex-1 lg:flex-col">
-          <TextResponse planeta={planeta} selectedInfo={selectedInfo} />
+          <TextResponse selectedInfo={selectedInfo} />
           <DesktopOptions
-            cor={planeta.cor}
             selectedInfo={selectedInfo}
             setSelectedInfo={setSelectedInfo}
           />

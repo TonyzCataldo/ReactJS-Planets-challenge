@@ -1,12 +1,16 @@
-const PlanetImage = ({ images, selectedInfo }) => {
+import { usePlanet } from "../context/PlanetContext";
+
+const PlanetImage = ({ selectedInfo }) => {
+  const { planeta } = usePlanet();
+
   const getPath = (src) =>
     `${import.meta.env.BASE_URL}${src.replace(/^\//, "")}`;
 
   const imgSource =
     selectedInfo === "structure"
-      ? getPath(images.internal)
-      : getPath(images.planet);
-  const geologySource = getPath(images.geology);
+      ? getPath(planeta.images.internal)
+      : getPath(planeta.images.planet);
+  const geologySource = getPath(planeta.images.geology);
 
   return (
     <div className="flex justify-center relative h-[301px] md:h-[460px] items-center lg:flex-[2.643]">
