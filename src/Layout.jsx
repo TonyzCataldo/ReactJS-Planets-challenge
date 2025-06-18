@@ -32,7 +32,7 @@ const Layout = () => {
           selectedInfo={selectedInfo}
           setSelectedInfo={setSelectedInfo}
         />
-        <PlanetsMd cor={planeta.cor} />
+        <PlanetsMd />
       </div>
       <div className="lg:flex lg:mt-[8.125rem] lg:pr-[11.46%]">
         <PlanetImage images={planeta.images} selectedInfo={selectedInfo} />
