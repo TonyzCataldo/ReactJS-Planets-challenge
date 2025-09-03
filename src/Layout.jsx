@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { usePlanet } from "./context/PlanetContext";
+
 import bgImg from "./assets/background-stars.svg";
 import Header from "./components/Header";
 import MobileOptions from "./components/MobileOptions";
@@ -11,7 +11,7 @@ import DesktopOptions from "./components/DesktopOptions";
 
 const Layout = () => {
   const [menuVisible, setMenuVisible] = useState(false);
-  const { planeta } = usePlanet(); // ← recebe o planeta do contexto
+
   const [selectedInfo, setSelectedInfo] = useState("overview");
 
   return (
@@ -43,7 +43,7 @@ const Layout = () => {
           />
         </div>
       </div>
-      <PlanetInfo planeta={planeta} />
+      <PlanetInfo />
     </div>
   );
 };
